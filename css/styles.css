@@ -1,32 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* margin: 0; */
 }
 
 nav {
     background-color: rgb(26, 91, 145);
-    height: 200px;
+    height: 83px;
     width: 100%;
-    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    /* background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 label.logo {
     color: white;
     font-weight: 900;
     font-size: 32px;
-    padding: 0 600px;
+    padding: 0 100px;
     text-transform: uppercase;
     line-height: 80px;
 }
 
-a {
-    text-decoration: none;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    display: inline-block;
-    /* width: 55px; */
-}
+
 
 nav ul {
     float: right;
@@ -46,14 +46,80 @@ nav ul li a {
 }
 
 a:hover {
+    display: inline-block;
     background-color: black;
     transition: .7s;
+    border-radius: 20px;
 }
 
-.img-logo {
-    width: 200px;
-    height: 100px;
-    margin-top: 0;
-    margin-left: 550px;
+.check-btn {
+    font-size: 32px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
 
+.check-btn:hover {
+    color: black;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .check-btn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+    }
+
+    nav ul li a {
+        font-size: 23px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+/** Termina el menú **/
+
+/** Comienza una nueva sección **/
+
+section {
+    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
